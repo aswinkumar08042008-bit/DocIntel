@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Environment variables
 .env
 
@@ -20,3 +21,11 @@ uploads/
 
 # IDE
 .vscode/
+=======
+.env
+node_modules/
+dist/
+__pycache__/
+.venv/
+backend/uploads/
+>>>>>>> 50819a9cc54a82390c00a8355c540c0a73debdeb
