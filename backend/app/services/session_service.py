@@ -56,7 +56,8 @@ def save_session(db: Session, request: SaveSessionRequest) -> dict:
         db.commit()
         return {"id": str(session.id), "title": session.title}
     except SQLAlchemyError:
-        db.rollback()
+        import logging
+        logging.getLogger("docinsight").exception("Failed to save session to PostgreSQL")
         raise _db_error()
 
 
