@@ -23,10 +23,20 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="DocInsight API", lifespan=lifespan)
-app.add_middleware(CORSMiddleware, allow_origins=get_settings().cors_list, allow_methods=["*"], allow_headers=["*"])
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://doc-intel-git-main-tech-builders3.vercel.app",
+        "http://localhost:5173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 for router in (routes_documents.router, routes_analysis.router, routes_sessions.router):
     app.include_router(router)
-
 
 @app.get("/health")
 def health():
