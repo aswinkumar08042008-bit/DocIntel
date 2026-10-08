@@ -8,6 +8,8 @@ class Settings(BaseSettings):
 
     gemini_api_key: str = ""
     gemini_model: str = "gemini-2.5-flash"
+    groq_api_key: str = ""
+    groq_model: str = "openai/gpt-oss-20b"
     database_url: str = "postgresql+psycopg2://postgres:postgres@localhost:5432/docinsight"
     app_api_key: str = ""
     max_files: int = 20

@@ -39,7 +39,7 @@ export default function App() {
 
   return (
     <>
-      <nav className="topbar"><span className="brand">DocInsight</span></nav>
+      <nav className="topbar"><span className="brand">DocIntel</span></nav>
       {openSessionId ? (
         <SavedSessionPage sessionId={openSessionId} onBack={() => setOpenSessionId(null)} />
       ) : workspace ? (

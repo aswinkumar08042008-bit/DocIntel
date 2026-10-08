@@ -54,7 +54,7 @@ export default function HomePage({ config, sessions, sessionsError, onProcessed,
   return (
     <main className="page">
       <section className="hero">
-        <h1>Intelligent Information Understanding &amp; Processing</h1>
+        <h1>INFO INTELLIGENCE</h1>
         <p className="lead">Upload multiple documents and let the system extract, understand, compare and organize the important information.</p>
         <p className="flow">Extract → Understand → Connect → Compare → Detect → Explain → You decide</p>
       </section>

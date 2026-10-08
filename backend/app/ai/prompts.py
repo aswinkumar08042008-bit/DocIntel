@@ -21,7 +21,7 @@ ACTION_INSTRUCTIONS = {
     "overall": 'Do a combined analysis of ALL documents: "summary", "important_info", "dates", "amounts", "comparison", "conflicts", "missing", "findings" and "simple_summary". Explain how the documents connect to each other (same project? one depends on another?).',
 }
 
-OUTPUT_FORMAT = """Reply with ONE JSON object only (no markdown fences, no extra text) using exactly these keys. Use empty lists for sections that are not requested or have nothing.
+OUTPUT_FORMAT = """Reply with ONE valid JSON object only. Do not use markdown fences or any text before or after the JSON. Use the keys shown below. Always return every top-level key, using empty arrays or empty strings when there is no information. Use empty lists for sections that are not requested or have nothing.
 {
  "summary": ["short bullet", ...],
  "important_info": [{"label": "...", "value": "...", "source": {"document": "file name", "location": "Page 4"}}],
